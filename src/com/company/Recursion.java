@@ -8,16 +8,16 @@ public class Recursion {
         int massive[] = new int[n];
         for (int i = 0; i < n; i++) {
             massive[i] = (int) (Math.random() * 100);
+            System.out.print(massive[i] + " ");
         }
-        System.out.println(Arrays.toString(massive));
-        return massive;
+              return massive;
     }
 
-    public static int[][] massive(int a, int b) {
-        int massive[][] = new int[a][b];
-        for (int i = 0; i < a; i++) {
-            massive[i] = new int[b];
-            for (int k = 0; k < b; k++) {
+    public static int[][] massive(int numberOfRows, int numberOfColums) {
+        int massive[][] = new int[numberOfRows][numberOfColums];
+        for (int i = 0; i < numberOfRows; i++) {
+            massive[i] = new int[numberOfColums];
+            for (int k = 0; k < numberOfColums; k++) {
                 massive[i][k] = (int) (Math.random() * 100);
                 System.out.print(massive[i][k] + " ");
             }

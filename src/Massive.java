@@ -6,6 +6,7 @@ public class Massive {
         int massive[] = new int[n];
         for (int i = 0; i < n; i++) {
             massive[i] = (int) (Math.random() * 100);
+            System.out.print(massive[i] + " ");
         }
         return massive;
     }
@@ -43,6 +44,7 @@ public class Massive {
     public static String operation(int[][] massive) {
         int max = massive[0][0];
         int min = massive[0][0];
+        int number =0;
         double sum = 0;
 
         for (int i = 0; i < massive.length; i++) {
@@ -57,9 +59,10 @@ public class Massive {
                 System.out.print(massive[i][k] + " ");
             }
             System.out.println("");
+            number++;
         }
-        return "\nМаксимальне число двохвимірного масиву є: " + max + ". Мінімальне число: " + min +
-                ". Сума чисел: " + sum + ". Cереднє значення чисел є: " + sum / massive.length / massive[0].length;
+        return "Максимальне число двохвимірного масиву є: " + max + ". Мінімальне число: " + min +
+                ". Сума чисел: " + sum + ". Cереднє значення чисел є: " + sum / number;
     }
 
     public static void main(String[] arg) {
@@ -70,7 +73,7 @@ public class Massive {
 
         System.out.println(operation(massive(numberOneDimensionMassive)));
 
-        System.out.println("Введіть розміри двохвимірного прямокутного масиву а*b:");
+        System.out.println("\nВведіть розміри двохвимірного прямокутного масиву а*b:");
         int numberOfRows = input.nextInt();
         input = new Scanner(System.in);
         int numberOfColums = input.nextInt();
