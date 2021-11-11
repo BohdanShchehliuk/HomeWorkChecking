@@ -38,14 +38,10 @@ public class Recursion {
     public static int operationSum(int[][] massive, int numberOfRows, int numberOfColums) {
         if (numberOfRows == 0) {
             return 0;
-
         } else {
-
             int sumNew = operationSum(massive[numberOfRows - 1], massive[numberOfRows - 1].length);
             return sumNew + operationSum(massive, numberOfRows - 1, numberOfColums);
         }
-
-
     }
 
 
